@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Change global font to Press Start 2P */
+@theme {
+  --font-sans: 'Press Start 2P', cursive;
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  /* Use pixel font globally */
+  font-family: var(--font-sans);
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+/* Optional hover animation for pixel elements */
+.pixel-hover {
+  transition: all 0.1s;
+}
+.pixel-hover:hover {
+  transform: scale(1.05);
+}
